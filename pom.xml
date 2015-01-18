@@ -39,7 +39,12 @@
 			<groupId>com.netflix.governator</groupId>
 			<artifactId>governator</artifactId>
 			<version>${governator.version}</version>
-		</dependency>		
+		</dependency>
+		<dependency>
+			<groupId>com.netflix.governator</groupId>
+			<artifactId>governator-test-junit</artifactId>
+			<version>${governator.version}</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
