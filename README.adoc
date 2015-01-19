@@ -1,0 +1,1 @@
+This is a simple project exploring the features of https://github.com/Netflix/governator[Netflix Governator] by comparing it with the dependency injection feature set of http://projects.spring.io/spring-framework/[Spring Framework]
