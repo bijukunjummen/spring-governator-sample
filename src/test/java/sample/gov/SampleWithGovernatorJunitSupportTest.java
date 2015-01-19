@@ -1,19 +1,13 @@
 package sample.gov;
 
 import com.google.inject.Injector;
-import com.netflix.governator.configuration.ArchaiusConfigurationProvider;
-import com.netflix.governator.guice.BootstrapBinder;
-import com.netflix.governator.guice.BootstrapModule;
-import com.netflix.governator.guice.LifecycleInjector;
 import com.netflix.governator.guice.LifecycleTester;
-import com.netflix.governator.lifecycle.LifecycleManager;
 import org.junit.Rule;
 import org.junit.Test;
 import sample.service.BlogService;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
+import static org.hamcrest.MatcherAssert.*;
+import static org.hamcrest.Matchers.*;
 
 public class SampleWithGovernatorJunitSupportTest {
 

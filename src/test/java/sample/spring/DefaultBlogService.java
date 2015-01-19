@@ -10,10 +10,9 @@ import sample.service.BlogService;
 @Service
 public class DefaultBlogService implements BlogService {
 
-    @Autowired
     private final BlogDao blogDao;
 
-    @Inject
+    @Autowired
     public DefaultBlogService(BlogDao blogDao) {
         this.blogDao = blogDao;
     }

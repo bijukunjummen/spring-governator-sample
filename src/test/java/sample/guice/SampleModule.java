@@ -4,7 +4,7 @@ import com.google.inject.AbstractModule;
 import sample.dao.BlogDao;
 import sample.service.BlogService;
 
-public class ExampleModule extends AbstractModule{
+public class SampleModule extends AbstractModule{
 
     @Override
     protected void configure() {
