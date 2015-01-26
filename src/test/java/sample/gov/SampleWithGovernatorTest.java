@@ -26,6 +26,7 @@ public class SampleWithGovernatorTest {
 
         BlogService blogService = injector.getInstance(BlogService.class);
         assertThat(blogService.get(1l), is(notNullValue()));
+        manager.close();
     }
 
 }

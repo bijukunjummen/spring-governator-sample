@@ -17,4 +17,6 @@ public class DefaultBlogService implements BlogService {
     public BlogEntry get(long id) {
         return this.blogDao.findById(id);
     }
+
+
 }

@@ -7,6 +7,9 @@ import sample.dao.BlogDao;
 import sample.model.BlogEntry;
 import sample.service.BlogService;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Service
 public class DefaultBlogService implements BlogService {
 
@@ -20,5 +23,14 @@ public class DefaultBlogService implements BlogService {
     @Override
     public BlogEntry get(long id) {
         return this.blogDao.findById(id);
+    }
+
+    @PostConstruct
+    public void postConstruct() {
+        System.out.println("PostConstruct called!!");
+    }
+    @PreDestroy
+    public void preDestroy() {
+        System.out.println("Pre-destroy called!!");
     }
 }
