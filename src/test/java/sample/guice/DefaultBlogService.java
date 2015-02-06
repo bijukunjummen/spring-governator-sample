@@ -18,5 +18,10 @@ public class DefaultBlogService implements BlogService {
         return this.blogDao.findById(id);
     }
 
+    @Override
+    public String getBlogServiceName() {
+        return null;
+    }
+
 
 }

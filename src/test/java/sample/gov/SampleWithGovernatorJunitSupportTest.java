@@ -19,12 +19,15 @@ public class SampleWithGovernatorJunitSupportTest {
         tester.start();
         Injector injector = tester
                 .builder()
+                .withBootstrapModule(new SampleBootstrapModule())
+                .withModuleClass(SampleModule.class)
                 .usingBasePackages("sample.gov")
                 .build()
                 .createInjector();
 
         BlogService blogService = injector.getInstance(BlogService.class);
         assertThat(blogService.get(1l), is(notNullValue()));
+        assertThat(blogService.getBlogServiceName(), equalTo("Test Blog Service"));
     }
 
 }

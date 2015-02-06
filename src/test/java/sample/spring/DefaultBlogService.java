@@ -2,6 +2,7 @@ package sample.spring;
 
 import com.google.inject.Inject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import sample.dao.BlogDao;
 import sample.model.BlogEntry;
@@ -15,6 +16,9 @@ public class DefaultBlogService implements BlogService {
 
     private final BlogDao blogDao;
 
+    @Value("${blogservice.name}")
+    private String blogServiceName;
+
     @Autowired
     public DefaultBlogService(BlogDao blogDao) {
         this.blogDao = blogDao;
@@ -23,6 +27,11 @@ public class DefaultBlogService implements BlogService {
     @Override
     public BlogEntry get(long id) {
         return this.blogDao.findById(id);
+    }
+
+    @Override
+    public String getBlogServiceName() {
+        return this.blogServiceName;
     }
 
     @PostConstruct

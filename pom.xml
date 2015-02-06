@@ -45,6 +45,11 @@
 			<artifactId>governator-test-junit</artifactId>
 			<version>${governator.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>com.github.bijukunjummen</groupId>
+			<artifactId>governator-junit-runner</artifactId>
+			<version>0.2.RELEASE</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
